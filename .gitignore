@@ -43,5 +43,4 @@ pc/pc.iml
 pc/.idea/
 pc/mouse.json
 credentials.txt
-.gitignore
 .idea

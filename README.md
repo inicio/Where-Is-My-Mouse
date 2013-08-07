@@ -1,8 +1,7 @@
 # Where Is My Mouse
 A near-real time display of my computer's cursor position.
 
-[Read about it](http://inic.io/where-is-my-mouse)
-[See it live](http://connorcrawford.com/whereismymouse/hereitis.html)
+[Read about it](http://inic.io/where-is-my-mouse) or [See it live](http://connorcrawford.com/whereismymouse/hereitis.html)
 
 ## Installation
 1. Change CSS width and height of *.screen* (web/hereitis.html) to your
@@ -12,6 +11,6 @@ computers screen resolution.
 4. Compile Java code
 5. Run
 
-*Caveat*: Some web hosts do not allow the FTP connection type attempted by
+**Caveat**: Some web hosts do not allow the FTP connection type attempted by
 the Java application. Contact your hosting provider if FTP connection errors
 arise.
