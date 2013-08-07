@@ -57,16 +57,17 @@ public class Main extends JFrame
         Container content = getContentPane();
         content.setBackground(Color.lightGray);
         content.add(p);
-
         setVisible(true);
+
         pack();
+
+        new Mouse().start();
 
     }
 
     public static void main(String[] args)
     {
         Main main = new Main();
-        main.startListening();
     }
 
     public void connectToFTP()
@@ -126,45 +127,6 @@ public class Main extends JFrame
         }
     }
 
-    public void startListening()
-    {
-        new Mouse().start();
-    }
-
-
-    public void listDr(String dr)
-    {
-        try
-        {
-            FTPFile[] list = client.list(dr);
-            System.out.println(list.length);
-
-            for (FTPFile file : list)
-            {
-                System.out.println(file.getName());
-            }
-
-        } catch (IOException e)
-        {
-        } catch (FTPIllegalReplyException e)
-        {
-            e.printStackTrace();
-            e.printStackTrace();
-        } catch (FTPException e)
-        {
-            e.printStackTrace();
-        } catch (FTPDataTransferException e)
-        {
-            e.printStackTrace();
-        } catch (FTPAbortedException e)
-        {
-            e.printStackTrace();
-        } catch (FTPListParseException e)
-        {
-            e.printStackTrace();
-        }
-    }
-
     class Mouse extends Thread
     {
         Point mouse;
@@ -184,11 +146,11 @@ public class Main extends JFrame
             try
             {
                 sleep(100);
-                startListening();
+                new Mouse().start();
             } catch (InterruptedException e)
             {
                 e.printStackTrace();
-                startListening();
+                new Mouse().start();
             }
         }
     }
